@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>实时语音翻译系统</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>实时语音翻译系统</h1>
+        
+        <div class="status-indicator disconnected">
+            <span class="indicator-dot"></span>
+            <span class="status-text">未连接</span>
+        </div>
+        
+        <div class="translation-panel">
+            <div class="panel-header">
+                <h2 class="panel-title">语音识别与翻译</h2>
+            </div>
+            
+            <div class="text-display">
+                <div>
+                    <div class="text-box-header">
+                        <span class="text-box-title">原始语音 (中文)</span>
+                    </div>
+                    <div id="recognitionText" class="text-box">
+                        <div class="caption-container" id="recognitionCaptions"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="text-box-header">
+                        <span class="text-box-title">翻译结果 (英文)</span>
+                    </div>
+                    <div id="translationText" class="text-box">
+                        <div class="caption-container" id="translationCaptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startButton" class="start-button">开始录音</button>
+            <button id="stopButton" class="stop-button" disabled>停止录音</button>
+        </div>
+    </div>
+
+    <script type="module" src="/static/main.js"></script>
+</body>
+</html>
